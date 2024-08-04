@@ -1,0 +1,23 @@
+with open('Hr_system.txt') as HR_list:
+    for items in HR_list:
+        items = items.strip()
+        items= items.split(' ')
+
+        names = items[0]
+        id_number = items[1]
+        job_title = items[2]
+        salary = float(items[3])
+
+        paycheck = salary/24
+
+
+
+        #print(f'Name:{names:10} Job Title:{job_title}')
+        #print(f'Name:{names:10} ID:({id_number}),   Job Title:{job_title:<15} - Salary:${salary:.2f}')
+        if job_title== 'Engineer':
+            paycheck += 1000
+    
+        print(f'Name:{names:10} (ID:{id_number}),   Job Title:{job_title:<15} - ${paycheck:.2f}')
+
+        #print(job_title)
+
